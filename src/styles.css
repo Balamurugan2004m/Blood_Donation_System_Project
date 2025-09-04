@@ -1,0 +1,940 @@
+/* --- CSS STYLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #DC2626;
+    --secondary-color: #F3F4F6;
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --background-color: #FFFFFF;
+    --white: #FFFFFF;
+    --border-color: #E5E7EB;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Header --- */
+.header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link.active, .nav-link:hover {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.header-actions {
+    display: flex;
+    gap: 16px;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Ensures content is centered */
+    gap: 8px;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: #B91C1C;
+}
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+}
+.btn-light {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+.btn-light:hover {
+    background-color: #FEF2F2;
+}
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 80px 0;
+}
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content now that image is gone */
+    text-align: center;
+}
+.hero-content {
+    flex: 1;
+    max-width: 700px; /* Add a max-width to prevent it from being too wide */
+}
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 0 0 8px 0;
+}
+.hero-title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 24px 0;
+}
+.hero-title .highlight {
+    color: var(--primary-color);
+}
+.hero-description {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 500px;
+    margin: 0 auto 32px auto; /* Center the description block */
+}
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center; /* Center the buttons */
+}
+
+/* --- Stats Section --- */
+.stats-section {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.stat-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+}
+.stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: var(--text-dark);
+}
+.stat-label {
+    font-size: 16px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* --- How It Works Section --- */
+.how-it-works-section {
+    padding: 80px 0;
+    background-color: #FAFAFA;
+}
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 48px auto;
+}
+.features-container {
+    display: flex;
+    gap: 32px;
+}
+.feature-card {
+    
+    flex: 1;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+.feature-icon-wrapper {
+    display: inline-flex;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin-bottom: 24px;
+}
+.feature-card-button{
+    text-decoration: none;
+}
+.feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+.feature-description {
+    color: var(--text-light);
+    margin: 0 0 24px 0;
+    min-height: 60px;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background-color: var(--primary-color);
+    padding: 64px 0;
+    color: var(--white);
+}
+.cta-container {
+    text-align: center;
+}
+.cta-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+.cta-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    margin: 0 auto 32px auto;
+    max-width: 600px;
+}
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 24px 0;
+    text-align: center;
+    color: var(--text-light);
+    border-top: 1px solid var(--border-color);
+    font-size: 14px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-actions, .cta-actions {
+        justify-content: center;
+    }
+    .hero-description {
+        margin: 0 auto 32px auto;
+    }
+    .features-container {
+        flex-direction: column;
+    }
+    .feature-description {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 40px;
+    }
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    .stat-card {
+        width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-actions .btn-secondary {
+        display: none;
+    }
+     .hero-actions {
+        flex-direction: column;
+    }
+    .stat-card {
+        width: 100%;
+    }
+}
+
+/* This centers the card on the page */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F9FAFB;
+}
+
+/* This is the main white card */
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+
+/* Styles the header part of the card */
+.auth-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.auth-header h2 {
+    font-size: 24px;
+    margin: 8px 0 4px 0;
+    color: var(--primary-color); /* Makes "LifeLink" red */
+}
+.auth-header p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* The "Sign In" / "Sign Up" toggle buttons */
+.auth-toggle {
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+.auth-toggle-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-light);
+    transition: all 0.2s ease-in-out;
+}
+.auth-toggle-btn.active {
+    background-color: var(--white);
+    color: var(--text-dark);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+
+/* Styles for the form elements */
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Styles the main "Sign In" button */
+.auth-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+}
+/* ================================================================ */
+/* --- STYLES FOR LOGIN & SIGN UP PAGES --- */
+/* ================================================================ */
+
+/* This centers the card on the page */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+
+/* This is the main white card */
+.auth-card {
+    margin-top:50px;
+    margin-bottom:50px;
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+
+/* Styles the header part of the card */
+.auth-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.auth-header h2 {
+    font-size: 24px;
+    margin: 8px 0 4px 0;
+    color: var(--primary-color); /* Makes "LifeLink" red */
+}
+.auth-header p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* The "Sign In" / "Sign Up" toggle buttons */
+.auth-toggle {
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+.auth-toggle-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-light);
+    transition: all 0.2s ease-in-out;
+}
+.auth-toggle-btn.active {
+    background-color: var(--white);
+    color: var(--text-dark);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+
+/* Styles for the form elements (used by both pages) */
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Styles the main "Sign In" or "Sign Up" button */
+.auth-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+}
+
+.lifelink-main-heading-style{
+    text-decoration: none;
+}
+
+/* ================================================================ */
+/* --- STYLES FOR DONOR DIRECTORY PAGE (Add to end of file) --- */
+/* ================================================================ */
+
+/* --- General Page Layout --- */
+.page-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+.page-header {
+    margin-bottom: 32px;
+}
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+.page-header p {
+    font-size: 16px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* --- Filter Bar --- */
+.filter-bar {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+.filter-bar input[type="search"] {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+}
+.filter-bar select {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    min-width: 150px;
+}
+.filter-bar span {
+    margin-left: auto;
+    font-size: 14px;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+/* --- Card Grid Layout --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* --- Donor Card --- */
+.donor-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+.donor-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+.donor-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.status-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    color: #065F46; /* Dark Green */
+    background-color: #D1FAE5; /* Light Green */
+}
+.donor-info {
+    margin: 8px 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+
+.form-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.form-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-section-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.tips-box {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: #FEF2F2;
+    border: 1px solid #FECACA;
+    border-radius: 12px;
+}
+
+.tips-box h4 {
+    margin: 0 0 12px 0;
+    color: #991B1B;
+}
+
+.tips-box ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #B91C1C;
+    font-size: 14px;
+}
+
+/* ================================================================ */
+/* --- STYLES FOR HOSPITAL DASHBOARD (Add to end of file) --- */
+/* ================================================================ */
+
+.dashboard-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.dashboard-stat-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; /* Important for the accent border */
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+
+.stat-card-content {
+    padding: 24px;
+}
+
+.stat-card-content .stat-label {
+    margin: 0 0 8px 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.stat-card-content .stat-value {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.stat-card-accent {
+    width: 6px;
+}
+
+.empty-state-container {
+    text-align: center;
+    padding: 64px 0;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.empty-state-icon {
+    display: inline-flex;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin-bottom: 24px;
+    color: var(--text-light);
+}
+
+.empty-state-container h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+}
+
+.empty-state-container p {
+    margin: 0 0 24px 0;
+    color: var(--text-light);
+}
+
+/* ================================================================ */
+/* --- STYLES FOR CREATE REQUEST PAGE (Add to end of file) --- */
+/* ================================================================ */
+
+.form-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.form-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-section-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 24px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.tips-box {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: #FEF2F2; /* Light red background */
+    border: 1px solid #FECACA; /* Red border */
+    border-radius: 12px;
+}
+
+.tips-box h4 {
+    margin: 0 0 12px 0;
+    color: #991B1B; /* Dark red text */
+}
+
+.tips-box ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #B91C1C; /* Slightly lighter red text */
+    font-size: 14px;
+}
+
+/* ================================================================ */
+/* --- STYLES FOR MY REQUESTS PAGE (Add to end of file) --- */
+/* ================================================================ */
+
+.request-list-container {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden; /* To keep the rounded corners */
+}
+
+.request-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.request-list-item:last-child {
+    border-bottom: none;
+}
+
+.request-item-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.request-item-main h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.request-item-main p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.request-item-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.request-status-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 9999px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Status Colors */
+.status-fulfilled {
+    background-color: #D1FAE5; /* Light Green */
+    color: #065F46; /* Dark Green */
+}
+.status-dot.status-fulfilled {
+    background-color: #10B981; /* Green */
+}
+
+.status-pending {
+    background-color: #FEF3C7; /* Light Yellow */
+    color: #92400E; /* Dark Yellow */
+}
+.status-dot.status-pending {
+    background-color: #F59E0B; /* Yellow */
+}
+
+/* ================================================================ */
+/* --- STYLES FOR DONOR REGISTRATION PAGE (Add to end of file) --- */
+/* ================================================================ */
+
+/* Styles the "Personal Information" and "Medical Information" subheadings */
+.form-section h4 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+/* Styles the "Available for donations" checkbox and label */
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.form-group-checkbox input {
+    width: 16px;
+    height: 16px;
+}
+
+.form-group-checkbox label {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+
+
